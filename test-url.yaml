@@ -4,4 +4,4 @@
   tasks:
     - name: test url
       uri:
-        url: https://www.facebook.com/
+        url: https://vm250-9.gsslab.pnq2.redhat.com
