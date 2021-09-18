@@ -4,4 +4,4 @@
   tasks:
     - name: test url
       uri:
-        url: https://ahuchcha-rhsat.syslab.pnq2.redhat.com
+        url: https://amar-test-server.com
