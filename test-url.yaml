@@ -4,4 +4,4 @@
   tasks:
     - name: test url
       uri:
-        url: https://vm250-9.gsslab.pnq2.redhat.com
+        url: https://ahuchcha-rhsat.syslab.pnq2.redhat.com
