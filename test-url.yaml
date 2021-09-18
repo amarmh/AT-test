@@ -4,4 +4,4 @@
   tasks:
     - name: test url
       uri:
-        url: https://access.redhat.com
+        url: https://www.facebook.com/
