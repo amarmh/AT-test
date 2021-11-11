@@ -1,7 +1,6 @@
-- name: test url
+- name: podman testing
   hosts: all
   become: false
   tasks:
-    - name: test url
-      uri:
-        url: https://amar-test-server.com
+    - name: show the podman version
+      ansible.builtin.command: podman version
