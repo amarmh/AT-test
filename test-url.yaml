@@ -1,6 +1,8 @@
-- name: podman testing
-  hosts: all
-  become: false
+- name: test vault
+  gather_facts: true
+  hosts: localhost
+ 
   tasks:
-    - name: show the podman version
-      ansible.builtin.command: podman version
+   -
+      debug:
+        msg: "{{ lookup('hashi_vault', 'secret={{ secret }} url=http://vm253-27.gsslab.pnq2.redhat.com:8200 token={{ token }} validate_certs=no') }}"
