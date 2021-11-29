@@ -1,8 +1,13 @@
 - name: test vault
   gather_facts: true
   hosts: localhost
- 
+  vars:
+    Data: "{{ lookup('hashi_vault', 'secret={{ secret }} url=http://vm253-27.gsslab.pnq2.redhat.com:8200 token={{ token }} validate_certs=no') }}"
+    AWS_ACCESS_KEY: "{{ Data['access_key'] }}" 
+    AWS_SECRET_KEY: "{{ Data['secret_key'] }}"
+    AWS_SECURITY_TOKEN: "{{ Data['security_token'] }}"
+
   tasks:
-   -
+    -
       debug:
-        msg: "{{ lookup('hashi_vault', 'secret={{ secret }} url=http://vm253-27.gsslab.pnq2.redhat.com:8200 token={{ token }} validate_certs=no') }}"
+        msg: "{{ AWS_ACCESS_KEY }}, {{ AWS_SECRET_KEY }}, {{ AWS_SECURITY_TOKEN }}"
