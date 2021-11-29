@@ -12,7 +12,7 @@
       debug:
         msg: "{{ AWS_ACCESS_KEY }}, {{ AWS_SECRET_KEY }}, {{ AWS_SECURITY_TOKEN }}"
         
-   - name: Copy file
-     copy:
-       src: "{{ tower.filename }}"
-       dest: /tmp
+    - name: Copy file
+      copy:
+        src: "{{ tower.filename }}"
+        dest: /tmp
