@@ -14,5 +14,5 @@
         
     - name: Copy file
       copy:
-        src: "{{ tower.filename }}"
+        src: "{{ lookup('env','MY_CLOUD_INI_FILE') }}"
         dest: /tmp
