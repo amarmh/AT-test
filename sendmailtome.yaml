@@ -6,7 +6,6 @@
      body: this is a test body message 
      to: ahuchcha@redhat.com 
      from: tower.example.com
-     delegate_to: localhost
      
      
 
