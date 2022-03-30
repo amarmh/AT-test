@@ -1,6 +1,6 @@
 - name: send email
   gather_facts: true
-  hosts: localhost
+  hosts: all
   mail:
      subject: Test Mail Module
      body: this is a test body message 
