@@ -6,6 +6,6 @@
       mail:
         host: localhost
         port: 25
-        to: Amar H <ahuchcha@redhat.com>
+        to: Amar H <amar@redhat.com>
         subject: Ansible-report
         body: System {{ ansible_hostname }} has been successfully provisioned.
