@@ -2,13 +2,6 @@
   gather_facts: true
   hosts: all
   tasks:
-    - name: send one mail 
-      mail:
-        subject: Test Mail Module
-        body: this is a test body message 
-        to: ahuchcha@redhat.com 
-        from: tower.example.com
-      
     - name: Sending an e-mail using the remote machine, not the Ansible controller node
       mail:
         host: localhost
