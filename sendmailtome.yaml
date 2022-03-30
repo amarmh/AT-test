@@ -8,12 +8,11 @@
         body: this is a test body message 
         to: ahuchcha@redhat.com 
         from: tower.example.com
-     
-     
-   - name: Sending an e-mail using the remote machine, not the Ansible controller node
-     mail:
-       host: localhost
-       port: 25
-       to: Amar H <ahuchcha@redhat.com>
-       subject: Ansible-report
-       body: System {{ ansible_hostname }} has been successfully provisioned.
+      
+    - name: Sending an e-mail using the remote machine, not the Ansible controller node
+      mail:
+        host: localhost
+        port: 25
+        to: Amar H <ahuchcha@redhat.com>
+        subject: Ansible-report
+        body: System {{ ansible_hostname }} has been successfully provisioned.
