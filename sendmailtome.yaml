@@ -1,11 +1,18 @@
 - name: send email
   gather_facts: true
   hosts: all
+  tasks:
+   - mail:
+       subject: Test Mail Module
+       body: this is a test body message 
+       to: ahuchcha@redhat.com 
+       from: tower.example.com
+     
+     
+- name: Sending an e-mail using the remote machine, not the Ansible controller node
   mail:
-     subject: Test Mail Module
-     body: this is a test body message 
-     to: ahuchcha@redhat.com 
-     from: tower.example.com
-     
-     
-
+    host: localhost
+    port: 25
+    to: Amar H <ahuchcha@redhat.com>
+    subject: Ansible-report
+    body: System {{ ansible_hostname }} has been successfully provisioned.
