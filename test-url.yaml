@@ -1,6 +1,6 @@
 - name: test vault
   gather_facts: true
-  hosts: localhost
+  hosts: all
   vars:
     Data: "{{ lookup('hashi_vault', 'secret={{ secret }} url={{ url }} token={{ token }} validate_certs=no') }}"
     AWS_ACCESS_KEY: "{{ Data['access_key'] }}" 
